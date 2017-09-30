@@ -1,12 +1,23 @@
 ﻿<?php
-$url=file_get_contents("https://m.tvsou.com/epg/ZJTV-1");
+$url=g_contents("https://m.tvsou.com/epg/ZJTV-1");
 preg_match_all( '#<span class="start">(.*?)<\/span>#', $url, $r);
 preg_match_all( '#<span class="name">(.*?)<\/span>#', $url, $t);
 foreach($r[0] as $k=>$v){
 $lrc= $t[0][$k];
 $liebiao.=$v.' '.$lrc.'<br>';
 }
-
+function g_contents($url) {
+       $ch = curl_init(); 
+curl_setopt($ch, CURLOPT_URL, $url); 
+curl_setopt($ch, CURLOPT_HEADER, false); 
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
+curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11'); 
+$res = curl_exec($ch); 
+$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE);  
+curl_close($ch) ; 
+return $res;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> 
@@ -15,14 +26,15 @@ $liebiao.=$v.' '.$lrc.'<br>';
 <meta name="Keywords" content="浙江卫视直播,浙江卫视在线直播,浙江卫视在线观看" />
 <meta name="description" content="网络电视直播中心提供浙江卫视在线直播,浙江卫视直播网,浙江卫视,浙江电视台,浙江卫视在线观看，在线直播" />
 <script>
-var _hmt = _hmt || [];
-(function() {
-var hm = document.createElement("script");
-hm.src = "//hm.baidu.com/hm.js?5812ace6a2c888fd44a4de29c849f5cf";
-var s = document.getElementsByTagName("script")[0];
-s.parentNode.insertBefore(hm, s);
- var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
@@ -151,9 +163,7 @@ s.parentNode.insertBefore(hm, s);
 <br>
 
 
-   <?php
-//include 'ad/d.php';
-?>
+<?php include 'd.php';?>
 <script src='/ad/d.js'></script>
 
 
