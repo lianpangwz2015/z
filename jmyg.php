@@ -1,78 +1,23 @@
 <?
 include 'config.php';
-$lid=$_GET['id'];
-$list='<cctv-1>cctv1#CCTV-1<cctv-1>
-<cctv-2>cctv2#CCTV-2<cctv-2>
-<cctv-3>cctv3#CCTV-3<cctv-3>
-<cctv-4>cctv4#CCTV-4asia<cctv-4>
-<cctv-5>cctv5#CCTV-5<cctv-5>
-<cctv-6>cctv6#CCTV-6<cctv-6>
-<cctv-7>cctv7#CCTV-7<cctv-7>
-<cctv-8>cctv8#CCTV-8<cctv-8>
-<cctv-9>cctv9#CCTV-9<cctv-9>
-<cctv-10>cctv10#CCTV-10<cctv-10>
-<cctv-11>cctv11#CCTV-11<cctv-11>
-<cctv-12>cctv12#CCTV-12<cctv-12>
-<cctv-13>cctv13#CCTV-13<cctv-13>
-<cctv-14>cctv14#CCTV-14<cctv-14>
-<cctv-15>cctv15#CCTV-15<cctv-15>
-<cctv5plus>cctv52#CCTV5+<cctv5plus>
-<hunan>hunan#HNTV-1<hunan>
-<jiangsu>jiangsu#JSTV-1<jiangsu>
-<zhejiang>zhejiang#ZJTV-1<zhejiang>
-<dongfang>dongfang#SMG<dongfang>
-<anhui>anhui#AHTV-1<anhui>
-<btv1>btv1#BTV-1<btv1>
-<shandong>shandong#SDTV-1<shandong>
-<tianjin>tianjin#TJTV-1<tianjin>
-<liaoning>liaoning#LNTV-1<liaoning>
-<jiangxi>jiangxi#JXTV-1<jiangxi>
-<heilongjiang>heilongjiang#HLJTV-1<heilongjiang>
-<yunnan>yunnan#YNTV-1<yunnan>
-<sichuan>sichuan#SCTV-1<sichuan>
-<henan>henan#HENANTV-1<henan>
-<guangdong>guangdong#GDTV-1<guangdong>
-<nanfang>nanfang#NFWS<nanfang>
-<shenzhenweishi>shenzhenweishi#SHENZHENTV-1<shenzhenweishi>
-<hubei>hubei#HBTV-1<hubei>
-<dongnan>dongnan#DNWS<dongnan>
-<chongqing>chongqing#CQTV-1<chongqing>
-<guizhou>guizhou#GZTV-1<guizhou>
-<hebei>hebei#HEBTV-1<hebei>
-<jilin>jilin#JLTV-1<jilin>
-<guangxi>guangxi#GXTV--1<guangxi>
-<qinghai>qinghai#QHTV-1<qinghai>
-<shanxi1>shanxi1#SHANXITV-1<shanxi1>
-<shanxi2>shanxi2#SXTV-1<shanxi2>
-<neimenggu>neimenggu#NMGTV-1<neimenggu>
-<ningxia>ningxia#NXTV-1<ningxia>
-<xizang>xizang#XZTV-1<xizang>
-<xinjiang>xinjiang#XJTV-1<xinjiang>
-<gansu>gansu#GSTV-1<gansu>
-<lvyou>lvyou#lyws<lvyou>
-<hxws>hxws#HXWS<hxws>
-<xmws>xmws#XIAMENTV-1<xmws>
-<btws>btws#BTZX-1<btws>
-';
-preg_match ( '/<.*?>'.$lid.'#(.*?)<.*?>/', $list, $key );
-$url=g_contents("https://m.tvsou.com/epg/".$key[1]);
-preg_match_all( '#<span class="start">(.*?)<\/span>#', $url, $r);
-preg_match_all( '#<span class="name">(.*?)<\/span>#', $url, $t);
-foreach($r[0] as $k=>$v){
-$lrc=$t[0][$k];
-$liebiao.=$v.' '.$lrc.'<br>';
+$date=date("Y-m-d");
+$ctv='http://tv.cntv.cn/index.php?action=zhibo-jiemu&channel='. $_GET['id'];
+$str=end(explode('<li class="cur" mark="zhibo">',getUrl($ctv)));
+preg_match_all('|<span class="time">(.*?)</li>|imsU',$str,$r);
+foreach($r[1] as $k=>$v){
+$lrc=iconv("UTF-8", "GB2312//IGNORE", $v);
+
 }
-function g_contents($url) {
-       $ch = curl_init(); 
-curl_setopt($ch, CURLOPT_URL, $url); 
-curl_setopt($ch, CURLOPT_HEADER, false); 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.1 Safari/537.11'); 
-$res = curl_exec($ch); 
-$rescode = curl_getinfo($ch, CURLINFO_HTTP_CODE);  
-curl_close($ch) ; 
-return $res;
+
+
+function getUrl($url) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+        @ $data = curl_exec($ch);
+        curl_close($ch);
+        return $data;
 }
 include 'list.php';
 global $list;
@@ -83,14 +28,14 @@ $pindao=$f[1][1];
 
 <html>
 <head>
-<title><?global $pindao; echo $pindao;?>èŠ‚ç›®é¢„å‘Š-<? global $title; echo $title; ?></title>
+<title><?global $pindao; echo $pindao;?>½ÚÄ¿Ô¤¸æ-<? global $title; echo $title; ?></title>
 <style type="text/css">
 body {overflow:hidden;font-size: 25px;margin: 0px;background-color: #ffffff;}
 .style1 {font-size: larger}
 </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Keywords" content="<?global $pindao; echo $pindao;?>èŠ‚ç›®é¢„å‘Š" />
-<meta name="description" content="ä¹è§†ç›´æ’­ç½‘ï¼Œä¸ºæ‚¨æä¾›<?global $pindao; echo $pindao;?>èŠ‚ç›®é¢„å‘Š" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="Keywords" content="<?global $pindao; echo $pindao;?>½ÚÄ¿Ô¤¸æ" />
+<meta name="description" content="ÀÖÊÓÖ±²¥Íø£¬ÎªÄúÌá¹©<?global $pindao; echo $pindao;?>½ÚÄ¿Ô¤¸æ" />
 
 
 <!-- letvlive.com Baidu tongji analytics -->
@@ -109,16 +54,16 @@ s.parentNode.insertBefore(hm, s);
 <body>
 <table width="100%" border="0">
   <tr>
-    <td > <div class="lrca style1"><? echo $liebiao;?></div></td>
+    <td ><span class="style1">&nbsp;<? global $lrc; echo $lrc;?></span></td>
     <td>&nbsp;<script type="text/javascript">
-    /*360*300 åˆ›å»ºäº 2016-01-16*/
+    /*360*300 ´´½¨ÓÚ 2016-01-16*/
     var cpro_id = "u2494914";
 </script>
 <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
   </tr>
   <tr>
     <td colspan="2">&nbsp;<br><br>
-      <span class="style1">æ‰€æœ‰èŠ‚ç›®é¢„å‘Šå‡å–è‡ªäºäº’è”ç½‘ï¼Œå¦‚æœæ²¡æœ‰èŠ‚ç›®é¢„å‘Šï¼Œé‚£å¯èƒ½æ˜¯ç¨‹åºæ²¡æœ‰è·å–åˆ°ã€‚ç»™æ‚¨å¸¦æ¥çš„ä¸ä¾¿ï¼Œè¡¨ç¤ºæ·±è¡¨æ­‰æ„ï¼</span></td>
+      <span class="style1">ËùÓĞ½ÚÄ¿Ô¤¸æ¾ùÈ¡×ÔÓÚ»¥ÁªÍø£¬Èç¹ûÃ»ÓĞ½ÚÄ¿Ô¤¸æ£¬ÄÇ¿ÉÄÜÊÇ³ÌĞòÃ»ÓĞ»ñÈ¡µ½¡£¸øÄú´øÀ´µÄ²»±ã£¬±íÊ¾Éî±íÇ¸Òâ£¡</span></td>
   </tr>
 </table>
 

@@ -78,24 +78,22 @@ s.parentNode.insertBefore(hm, s);
 </head>
 
  <body>
-            <div id="a1"></div>
+      
+        
 
-             <script type="text/javascript" src="player.js" charset="utf-8"></script>
+<div id="a1" style="psotion:relative;"></div>
 
-         
-            <script type="text/javascript">
-                            var flashvars={
-                                f:'m3u8.swf',
-                                a:encodeURIComponent('http://eshare.live.otvcloud.com/otv/nyz/live/channel90/400.m3u8'),
-                                c:0,
-                                s:4,
-                                lv:1,
-                                loaded:'loadedHandler',
-                                p:1
-                            };
-                            var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
-                            CKobject.embedSWF('player.swf','a1','ckplayer_a1','690','500',flashvars,params);
-         </script> 
-        </body>
+<script type="text/javascript">
+   
+	var purl='rtmp://livertmp-al.wasu.cn/live11/hd_zjws';
+	
+	var isiPad = navigator.userAgent.match(/iPad|iPhone|Linux|Android|iPod/i) != null;
+    if (isiPad) {
+        document.getElementById('a1').innerHTML = '<video src="'+purl+'" controls="controls" autoplay="autoplay" width="100%" height="100%" style="psotion:relative;""></video>'
+	}else{
+	    document.writeln("<embed name=\'hunantv-player-1\' class=\'\' id=\'hunantv-player-1\' src=\'http://g.alicdn.com/de/prismplayer-flash/1.2.16/PrismPlayer.swf?vurl="+purl+"\'  quality=\'best\' allowscriptaccess=\'always\' wmode=\'Opaque\' allowfullscreen=\'true\'  type=\'application/x-shockwave-flash\' pluginspage=\'http://www.macromedia.com/go/getflashplayer\' height=\'100%\' width=\'100%\'></embed>");
+	}
+  </script>
 
+</body>
 </html>
