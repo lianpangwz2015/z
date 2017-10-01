@@ -1,0 +1,4 @@
+﻿<list><m label="↘ 选择播放线路" opened="1">
+<m label="中国经济信息" src="zgjyt" rtmp="rtmp://203.207.99.19:1935/live/" type="2" />
+<m label="四川成都联通" src="HuNTV_M.stream" rtmp="rtmp://m3u8.sctv.com:51935/live/" type="2" />
+</m></list>

@@ -1,0 +1,1 @@
+document.writeln('<embed width="100%" height="500" wmode="transparent" type="application/x-shockwave-flash" src="../cmp/cmp.swf?type=youku&src='+videosid+'&auto_play=1&url=config.xml&lists=&label='+videosname+'" quality="hight" allowfullscreen="true" ></embed>');
