@@ -397,51 +397,51 @@ s.parentNode.insertBefore(hm, s);
 <!--VIDEO LIST-->
 <div class="video_list clearfix">
 <div class="plist">
-    <a href="<?php echo $playurl1;?>" target="_blank" name="<? echo $title1;?>"><img class="listpic" src="<? echo $img1;?>" alt="<?php echo $title1;?>"  width="200"  height="138" ><span class="v_bq_hong"><? echo ($le1);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <a href="<?php echo $playurl1;?>" target="_blank" name="<?php echo $title1;?>"><img class="listpic" src="<?php echo $img1;?>" alt="<?php echo $title1;?>"  width="200"  height="138" ><span class="v_bq_hong"><?php echo ($le1);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
     <h2><?php echo $title1;?></h2>
     
 </div>
 
 <div class="plist">
-    <a href="<?php echo $playurl2;?>" target="_blank" name="<? echo $title2;?>"><img class="listpic" src="<? echo $img2;?>" alt="<? echo $title2;?>"  width="200"  height="138" ><span class="v_bq_lan"><? echo ($le2);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title2;?></h2>
+    <a href="<?php echo $playurl2;?>" target="_blank" name="<?php echo $title2;?>"><img class="listpic" src="<?php echo $img2;?>" alt="<?php echo $title2;?>"  width="200"  height="138" ><span class="v_bq_lan"><?php echo ($le2);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title2;?></h2>
    
 </div>
 
 <div class="plist">
-    <a href="<?php echo $playurl3;?>" target="_blank" name="<? echo $title3;?>"><img class="listpic" src="<? echo $img3;?>" alt="<? echo $title3;?>"  width="200"  height="138" ><span class="v_bq_hong"><? echo ($le3);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title3;?></h2>
+    <a href="<?php echo $playurl3;?>" target="_blank" name="<?php echo $title3;?>"><img class="listpic" src="<?php echo $img3;?>" alt="<?php echo $title3;?>"  width="200"  height="138" ><span class="v_bq_hong"><?php echo ($le3);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title3;?></h2>
     
 </div>
 
 <div class="plist">
-    <a href="<?php echo $playurl4;?>" target="_blank" name="<? echo $title4;?>"><img class="listpic" src="<? echo $img4;?>" alt="<? echo $title4;?>"  width="200"  height="138" ><span class="v_bq_lan"><? echo ($le4);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title4;?></h2>
+    <a href="<?php echo $playurl4;?>" target="_blank" name="<?php echo $title4;?>"><img class="listpic" src="<?php echo $img4;?>" alt="<?php echo $title4;?>"  width="200"  height="138" ><span class="v_bq_lan"><?php echo ($le4);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title4;?></h2>
    
 </div>
 
 
 
 <div class="plist">
-    <a href="<?php echo $playurl5;?>" target="_blank" name="<? echo $title5;?>"><img class="listpic" src="<? echo $img5;?>" alt="<? echo $title5;?>"  width="200"  height="138" ><span class="v_bq_hong"><? echo ($le5);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title5;?></h2>
+    <a href="<?php echo $playurl5;?>" target="_blank" name="<?php echo $title5;?>"><img class="listpic" src="<?php echo $img5;?>" alt="<?php echo $title5;?>"  width="200"  height="138" ><span class="v_bq_hong"><?php echo ($le5);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title5;?></h2>
    
 </div>
 
 <div class="plist">
-    <a href="<?php echo $playurl6;?>" target="_blank" name="<? echo $title6;?>"><img class="listpic" src="<? echo $img6;?>" alt="<? echo $title6;?>"  width="200"  height="138" ><span class="v_bq_lan"><? echo ($le6);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title6;?></h2>
+    <a href="<?php echo $playurl6;?>" target="_blank" name="<?php echo $title6;?>"><img class="listpic" src="<?php echo $img6;?>" alt="<?php echo $title6;?>"  width="200"  height="138" ><span class="v_bq_lan"><?php echo ($le6);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title6;?></h2>
    
 </div>
 
 <div class="plist">
-    <a href="<?php echo $playurl7;?>" target="_blank" name="<? echo $title7;?>"><img class="listpic" src="<? echo $img7;?>" alt="<? echo $title7;?>"  width="200"  height="138" ><span class="v_bq_hong"><? echo ($le7);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title7;?></h2>
+    <a href="<?php echo $playurl7;?>" target="_blank" name="<?php echo $title7;?>"><img class="listpic" src="<?php echo $img7;?>" alt="<?php echo $title7;?>"  width="200"  height="138" ><span class="v_bq_hong"><?php echo ($le7);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title7;?></h2>
   
 </div>
 <div class="plist">
-    <a href="<?php echo $playurl8;?>" target="_blank" name="<? echo $title8;?>"><img class="listpic" src="<? echo $img8;?>" alt="<? echo $title8;?>"  width="200"  height="138" ><span class="v_bq_lan"><? echo ($le8);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
-    <h2><? echo $title8;?></h2>
+    <a href="<?php echo $playurl8;?>" target="_blank" name="<?php echo $title8;?>"><img class="listpic" src="<?php echo $img8;?>" alt="<?php echo $title8;?>"  width="200"  height="138" ><span class="v_bq_lan"><?php echo ($le8);?></span><span class="v_bg"></span><span class="v_bq_vico"></span></a>
+    <h2><?php echo $title8;?></h2>
    
 </div>
 </div>  

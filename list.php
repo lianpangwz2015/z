@@ -1,4 +1,4 @@
-﻿<?
+﻿<?php
 $list='湖南卫视
 <hunan>湖南卫视#节目预告#jmyg.php?id=hunan<hunan>
 <hunan>湖南卫视#湖南卫视#/player/m3u8.php?id=http://r.gslb.lecloud.com/live/hls/201706223000000cf99/desc.m3u8<hunan>
