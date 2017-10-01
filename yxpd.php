@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<?
+<?php
 include 'list2.php';
 include 'config.php';
 
@@ -80,10 +80,10 @@ $lie .=$div4;
 ?>
 <head>
 
-<title><?global $pindao; echo $pindao;?>直播-<?global $pindao; echo $pindao;?>在线直播-<? global $title; echo $title; ?></title>
+<title><?phpglobal $pindao; echo $pindao;?>直播-<?phpglobal $pindao; echo $pindao;?>在线直播-<?php global $title; echo $title; ?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="Keywords" content="<?global $pindao; echo $pindao;?>直播,<?global $pindao; echo $pindao;?>在线直播" />
-<meta name="description" content="乐视直播网，为您提供<? global $pindao; echo $pindao;?>直播服务。" />
+<meta name="Keywords" content="<?phpglobal $pindao; echo $pindao;?>直播,<?phpglobal $pindao; echo $pindao;?>在线直播" />
+<meta name="description" content="乐视直播网，为您提供<?php global $pindao; echo $pindao;?>直播服务。" />
 
 <link type="text/css" rel="stylesheet" media="all" href="css/video.css" />
 <style type="text/css">
@@ -308,10 +308,10 @@ s.parentNode.insertBefore(hm, s);
        </div>
 	  
 	  <div class="snvtva">
-	  <? 
+	  <?php 
   echo $liebiao;
   ?>
-  <script language="JavaScript"> document.writeln("<iframe id=\"c_play\" name=\"c_play\" src=\"<? global $zb; echo $zb;?>\"  width=\"100%\" height=\"479\" scrolling=\"auto\" frameborder=\"0\" border=\"0\" allowtransparency=\"true\"></iframe>");</script>
+  <script language="JavaScript"> document.writeln("<iframe id=\"c_play\" name=\"c_play\" src=\"<?php global $zb; echo $zb;?>\"  width=\"100%\" height=\"479\" scrolling=\"auto\" frameborder=\"0\" border=\"0\" allowtransparency=\"true\"></iframe>");</script>
 
 		<div class="l"><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a><a href="#" class="bds_ty" data-cmd="ty" title="分享到天涯社区"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["sqq","weixin","tieba","ty","tsina","qzone","tqq","renren","douban"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","weixin","tieba","ty","tsina","qzone","tqq","renren","douban"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div>
@@ -348,68 +348,68 @@ s.parentNode.insertBefore(hm, s);
     <div class="zhibowxtb">
 
  <div class="lrca style1"> <li mark="none">
-        <span class="time"><? global $lrc; echo $lrc;?></div>
+        <span class="time"><?php global $lrc; echo $lrc;?></div>
   
  <div class="lrcb"><div class="widget-box mb15">
    
     <div class="widget-hot clear">
       <ul>
 	   
-   <li><a href="<? echo $playurl9;?>" target="_blank" title="<? echo $title9;?>"><img src="<? echo $img9;?>" width="130" height="90" alt="<? echo $title9;?>" title="<? echo $title9;?>"></a>
-          <div class="txt"><a href="<? echo $playurl9;?>" title="<? echo $title9;?>"><? echo $title9;?></a></div>
+   <li><a href="<?php echo $playurl9;?>" target="_blank" title="<?php echo $title9;?>"><img src="<?php echo $img9;?>" width="130" height="90" alt="<?php echo $title9;?>" title="<?php echo $title9;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl9;?>" title="<?php echo $title9;?>"><?php echo $title9;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl10;?>" target="_blank" title="<? echo $title10;?>"><img src="<? echo $img10;?>" width="130" height="90" alt="<? echo $title10;?>" title="<? echo $title10;?>"></a>
-          <div class="txt"><a href="<? echo $playurl10;?>" title="<? echo $title10;?>"><? echo $title10;?></a></div>
+  <li><a href="<?php echo $playurl10;?>" target="_blank" title="<?php echo $title10;?>"><img src="<?php echo $img10;?>" width="130" height="90" alt="<?php echo $title10;?>" title="<?php echo $title10;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl10;?>" title="<?php echo $title10;?>"><?php echo $title10;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl11;?>" target="_blank" title="<? echo $title11;?>"><img src="<? echo $img11;?>" width="130" height="90" alt="<? echo $title11;?>" title="<? echo $title11;?>"></a>
-          <div class="txt"><a href="<? echo $playurl11;?>" title="<? echo $title11;?>"><? echo $title11;?></a></div>
+  <li><a href="<?php echo $playurl11;?>" target="_blank" title="<?php echo $title11;?>"><img src="<?php echo $img11;?>" width="130" height="90" alt="<?php echo $title11;?>" title="<?php echo $title11;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl11;?>" title="<?php echo $title11;?>"><?php echo $title11;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl12;?>" target="_blank" title="<? echo $title12;?>"><img src="<? echo $img12;?>" width="130" height="90" alt="<? echo $title12;?>" title="<? echo $title12;?>"></a>
-          <div class="txt"><a href="<? echo $playurl12;?>" title="<? echo $title12;?>"><? echo $title12;?></a></div>
+  <li><a href="<?php echo $playurl12;?>" target="_blank" title="<?php echo $title12;?>"><img src="<?php echo $img12;?>" width="130" height="90" alt="<?php echo $title12;?>" title="<?php echo $title12;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl12;?>" title="<?php echo $title12;?>"><?php echo $title12;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl13;?>" target="_blank" title="<? echo $title13;?>"><img src="<? echo $img13;?>" width="130" height="90" alt="<? echo $title13;?>" title="<? echo $title13;?>"></a>
-          <div class="txt"><a href="<? echo $playurl13;?>" title="<? echo $title13;?>"><? echo $title13;?></a></div>
+  <li><a href="<?php echo $playurl13;?>" target="_blank" title="<?php echo $title13;?>"><img src="<?php echo $img13;?>" width="130" height="90" alt="<?php echo $title13;?>" title="<?php echo $title13;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl13;?>" title="<?php echo $title13;?>"><?php echo $title13;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl14;?>" target="_blank" title="<? echo $title14;?>"><img src="<? echo $img14;?>" width="130" height="90" alt="<? echo $title14;?>" title="<? echo $title14;?>"></a>
-          <div class="txt"><a href="<? echo $playurl14;?>" title="<? echo $title14;?>"><? echo $title14;?></a></div>        </li>
+  <li><a href="<?php echo $playurl14;?>" target="_blank" title="<?php echo $title14;?>"><img src="<?php echo $img14;?>" width="130" height="90" alt="<?php echo $title14;?>" title="<?php echo $title14;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl14;?>" title="<?php echo $title14;?>"><?php echo $title14;?></a></div>        </li>
 		     
-   <li><a href="<? echo $playurl15;?>" target="_blank" title="<? echo $title15;?>"><img src="<? echo $img15;?>" width="130" height="90" alt="<? echo $title15;?>" title="<? echo $title15;?>"></a>
-          <div class="txt"><a href="<? echo $playurl15;?>" title="<? echo $title15;?>"><? echo $title15;?></a></div>
+   <li><a href="<?php echo $playurl15;?>" target="_blank" title="<?php echo $title15;?>"><img src="<?php echo $img15;?>" width="130" height="90" alt="<?php echo $title15;?>" title="<?php echo $title15;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl15;?>" title="<?php echo $title15;?>"><?php echo $title15;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl16;?>" target="_blank" title="<? echo $title16;?>"><img src="<? echo $img16;?>" width="130" height="90" alt="<? echo $title16;?>" title="<? echo $title16;?>"></a>
-          <div class="txt"><a href="<? echo $playurl16;?>" title="<? echo $title16;?>"><? echo $title16;?></a></div>
+  <li><a href="<?php echo $playurl16;?>" target="_blank" title="<?php echo $title16;?>"><img src="<?php echo $img16;?>" width="130" height="90" alt="<?php echo $title16;?>" title="<?php echo $title16;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl16;?>" title="<?php echo $title16;?>"><?php echo $title16;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl17;?>" target="_blank" title="<? echo $title17;?>"><img src="<? echo $img17;?>" width="130" height="90" alt="<? echo $title17;?>" title="<? echo $title17;?>"></a>
-          <div class="txt"><a href="<? echo $playurl17;?>" title="<? echo $title17;?>"><? echo $title17;?></a></div>
+  <li><a href="<?php echo $playurl17;?>" target="_blank" title="<?php echo $title17;?>"><img src="<?php echo $img17;?>" width="130" height="90" alt="<?php echo $title17;?>" title="<?php echo $title17;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl17;?>" title="<?php echo $title17;?>"><?php echo $title17;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl18;?>" target="_blank" title="<? echo $title18;?>"><img src="<? echo $img18;?>" width="130" height="90" alt="<? echo $title18;?>" title="<? echo $title18;?>"></a>
-          <div class="txt"><a href="<? echo $playurl18;?>" title="<? echo $title18;?>"><? echo $title18;?></a></div>
+  <li><a href="<?php echo $playurl18;?>" target="_blank" title="<?php echo $title18;?>"><img src="<?php echo $img18;?>" width="130" height="90" alt="<?php echo $title18;?>" title="<?php echo $title18;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl18;?>" title="<?php echo $title18;?>"><?php echo $title18;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl19;?>" target="_blank" title="<? echo $title19;?>"><img src="<? echo $img19;?>" width="130" height="90" alt="<? echo $title19;?>" title="<? echo $title19;?>"></a>
-          <div class="txt"><a href="<? echo $playurl19;?>" title="<? echo $title19;?>"><? echo $title19;?></a></div>
+  <li><a href="<?php echo $playurl19;?>" target="_blank" title="<?php echo $title19;?>"><img src="<?php echo $img19;?>" width="130" height="90" alt="<?php echo $title19;?>" title="<?php echo $title19;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl19;?>" title="<?php echo $title19;?>"><?php echo $title19;?></a></div>
         </li>
             
 	
-  <li><a href="<? echo $playurl20;?>" target="_blank" title="<? echo $title20;?>"><img src="<? echo $img20;?>" width="130" height="90" alt="<? echo $title20;?>" title="<? echo $title20;?>"></a>
-          <div class="txt"><a href="<? echo $playurl20;?>" title="<? echo $title20;?>"><? echo $title20;?></a></div>        </li>
+  <li><a href="<?php echo $playurl20;?>" target="_blank" title="<?php echo $title20;?>"><img src="<?php echo $img20;?>" width="130" height="90" alt="<?php echo $title20;?>" title="<?php echo $title20;?>"></a>
+          <div class="txt"><a href="<?php echo $playurl20;?>" title="<?php echo $title20;?>"><?php echo $title20;?></a></div>        </li>
             
       </ul>
     </div>
@@ -597,6 +597,6 @@ function showsubmenu(){
 友情链接： <a href="tvlive.php" target="_blank">乐视直播网旧版</a>&nbsp  <a href="http://zhejiang.letvlive.com" target="_blank">浙江卫视</a>&nbsp 所有资源均来自互联网，如有侵犯版权，请联系我。<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_4946187'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s6.cnzz.com/stat.php%3Fid%3D4946187%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></td>
  
 </div>
-<?php include_once("baidu_js_push.php") ?>
+<?phpphp include_once("baidu_js_push.php") ?>
 </body>
 </html>
